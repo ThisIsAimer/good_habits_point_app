@@ -1,3 +1,3 @@
-string = "what is going on fam"
+import functions
 
-print(string[-6:-4])
+print(functions.get_point())
