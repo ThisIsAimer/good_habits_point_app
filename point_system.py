@@ -41,8 +41,9 @@ def point_system():
                 functions.write_point(str(int_score))
                 window["score"].update(str(int_score))
 
+                score = functions.get_point()
                 current_logs = functions.get_logs()
-                new_log = f"log: {time.strftime("%b %d %Y, %H:%M:%S")} : {value["tasks"][0]}"
+                new_log = f"{time.strftime("%b %d %Y, %H:%M:%S")}: new total: {score}. Log: {value["tasks"][0]}"
                 current_logs.append(new_log)
                 functions.write_logs(current_logs)
 
@@ -50,6 +51,12 @@ def point_system():
                 int_score -= 10
                 functions.write_point(str(int_score))
                 window["score"].update(str(int_score))
+
+                score = functions.get_point()
+                current_logs = functions.get_logs()
+                new_log = f"{time.strftime("%b %d %Y, %H:%M:%S")}: new total: {score}. Log: reduced points: -10\n"
+                current_logs.append(new_log)
+                functions.write_logs(current_logs)
 
 
             case "edit":
