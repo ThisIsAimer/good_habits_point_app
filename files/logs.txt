@@ -1,11 +1,2 @@
 Starting power level: 500
-Dec 15 2024, 12:19:10: new total: 510. Log: workout: 10
-Dec 15 2024, 12:19:11: new total: 520. Log: discipline: 10
-Dec 15 2024, 12:19:11: new total: 527. Log: study for 20 mins: 7
-Dec 15 2024, 12:19:12: new total: 531. Log: push yourself: 4
-Dec 15 2024, 12:19:13: new total: 536. Log: helping others: 5
-Dec 15 2024, 12:22:00: new total: 526. Log: reduced points: -10
-Dec 15 2024, 12:22:01: new total: 536. Log: discipline: 10
-Dec 15 2024, 12:22:02: new total: 526. Log: reduced points: -10
-Dec 15 2024, 12:22:03: new total: 536. Log: discipline: 10
-Dec 15 2024, 12:22:04: new total: 526. Log: reduced points: -10
+Dec 15 2024, 20:01:22: new total: 510. Log: workout: 10
