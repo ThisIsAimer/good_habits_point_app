@@ -3,5 +3,5 @@ push yourself: 4
 study for 20 mins: 7
 discipline: 10
 helping others: 5
-no junk food: 9
+no junk food: 10
 completion of goal: 21

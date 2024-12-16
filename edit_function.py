@@ -27,10 +27,15 @@ def edit_function():
                 break
 
             case "Add":
-                new_task = value["task"] + "\n"
-                tasks.append(new_task)
-                functions.write_tasks(tasks)
-                window['tasks'].update(tasks)
+                if value["task"] =="":
+                    continue
+
+                else:
+                    new_task = value["task"].replace("\n","")
+                    new_task = new_task + "\n"
+                    tasks.append(new_task)
+                    functions.write_tasks(tasks)
+                    window['tasks'].update(tasks)
 
             case "Edit":
                 try:
@@ -55,6 +60,8 @@ def edit_function():
                     window["task"].update(value="")
                 except IndexError:
                     Gui.popup("please select an item to complete",font=("Helvetica",10))
+                except ValueError:
+                    Gui.popup("something went wrong", font=("Helvetica", 10))
 
             case "Done":
                 window.close()

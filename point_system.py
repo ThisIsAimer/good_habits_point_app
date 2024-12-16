@@ -24,9 +24,9 @@ def point_system():
     window = Gui.Window("Discipline app", layout=[[score_text,main_score,space_text, set_button],[items,edit_items_button],[notice],[minus_button,lobs_button]],font=("Helvetica",10))
 
     while True:
+
         score = functions.get_point()
         int_score = int(score)
-
 
         event,value = window.read()
 
@@ -36,17 +36,23 @@ def point_system():
                 break
 
             case "tasks":
-                point = int(value["tasks"][0][-3:])
-                int_score += point
-                functions.write_point(str(int_score))
-                window["score"].update(str(int_score))
+                try:
+                    point = int(value["tasks"][0][-3:])
+                    int_score += point
+                    functions.write_point(str(int_score))
+                    window["score"].update(str(int_score))
 
-                score = functions.get_point()
-                current_logs = functions.get_logs()
-                new_log = f"{time.strftime("%b %d %Y, %H:%M:%S")}: new total: {score}. Log: {value["tasks"][0]}"
-                current_logs.append(new_log)
-                functions.write_logs(current_logs)
+                    score = functions.get_point()
+                    current_logs = functions.get_logs()
+                    new_log = f"{time.strftime("%b %d %Y, %H:%M:%S")}: new total: {score}. Log: {value["tasks"][0]}"
+                    current_logs.append(new_log)
+                    functions.write_logs(current_logs)
 
+                except ValueError:
+                    Gui.popup("please write in the format \n'something: 20' \nthe number should be at the end\na 2 digit number with space in front", font=("Helvetica", 10))
+
+                except IndexError:
+                    continue
             case "minus":
                 int_score -= 10
                 functions.write_point(str(int_score))
@@ -64,7 +70,7 @@ def point_system():
                 edit_function.edit_function()
 
             case "logs":
-                filepath = "files/logs.txt"
+                filepath = "files for discipline app/logs.txt"
                 os.system(f"notepad {filepath}")
 
             case "set":

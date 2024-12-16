@@ -1,3 +1,3 @@
-import functions
-
-print(functions.get_point())
+string = "how are ya"
+string = string.replace()
+print(string[:2])

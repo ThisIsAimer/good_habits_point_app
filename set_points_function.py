@@ -38,7 +38,7 @@ def set_points():
                     Gui.popup("please enter a valid number", font=("Helvetica", 10))
 
             case "Logs":
-                filepath = "files/logs.txt"
+                filepath = "files for discipline app/logs.txt"
                 os.system(f"notepad {filepath}")
 
             case "Reset logs":
