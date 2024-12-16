@@ -1,2 +1,1 @@
-Starting power level: 500
-Dec 15 2024, 20:01:22: new total: 510. Log: workout: 10
+Starting power level: 0
